@@ -13,6 +13,7 @@
     @section('content')
         <div class="container">
             <hr color="#c0c0c0">
+            <h1>ニュース一覧</h1>
             @if (!is_null($headline))
                 <div class="row">
                     <div class="headline col-md-10 mx-auto">
@@ -44,7 +45,7 @@
                             <div class="row">
                                 <div class="text col-md-6">
                                     <div class="date">
-                                        {{ $post->updated_at->format('Y年m月d日') }}
+                                        登録日：{{ $post->updated_at->format('Y年m月d日') }}
                                     </div>
                                     <div class="title">
                                         {{ str_limit($post->title, 150) }}
